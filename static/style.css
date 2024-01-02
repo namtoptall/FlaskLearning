@@ -11,7 +11,7 @@ header {
 }
 
 .logo img {
-    max-width: 50px;
+    max-width: 100px; /* Increase the max-width to make the logo bigger */
     margin-right: 10px;
 }
 
@@ -23,7 +23,6 @@ header {
 h2, h3 {
     text-align: center;
 }
-
 .product-container {
     display: flex;
     justify-content: space-around;
@@ -31,11 +30,13 @@ h2, h3 {
 }
 
 .product-card, .product-detail {
+    flex: 0 0 calc(25% - 20px); /* Adjust the width of each item to 25% with margin */
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
     text-align: center;
+    box-sizing: border-box; /* Include padding and border in item width calculation */
 }
 
 .product-card img, .product-detail img {

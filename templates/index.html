@@ -20,12 +20,11 @@
         <div class="product-container">
             {% for product in featured_products %}
                 <div class="product-card">
-                    <img src="{{ url_for('static', filename='images/' + product.image) }}" alt="{{ product.name }}">
+                    <img src="{{ url_for('static', filename=product['image']) }}" alt="{{ product['name'] }}">
                     <h3>{{ product.name }}</h3>
                     <p>{{ product.description }}</p>
                     <p class="price">${{ product.price }}</p>
                     <a href="{{ url_for('product_detail', product_id=product.id) }}">Details</a>
-
                 </div>
             {% endfor %}
         </div>
